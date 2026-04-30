@@ -205,7 +205,7 @@ jobs:
           args: >
             -Dsonar.projectKey=anneBaque_fprime
             -Dsonar.organization=anneBaque
-            -Dsonar.branch.name=release
+            -Dsonar.branch.name=devel
             -Dsonar.sources=Fw
             -Dsonar.inclusions=Fw/**/*
             -Dsonar.cfamily.compile-commands=build-artifacts/aarch64-linux/compile_commands.json
