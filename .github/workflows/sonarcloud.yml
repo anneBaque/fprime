@@ -2,6 +2,7 @@ name: SonarCloud Analysis
 on:
   push:
     branches: [ "main" ]
+     release/v4.2.x
   pull_request:
 jobs:
   build:
