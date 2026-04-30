@@ -89,3 +89,13 @@ jobs:
           fprime-util build --all --ut -j4 && \
           fprime-util check --all -j4 --pass-through --output-on-failure
         "
+    - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Al no poner argumentos de rutas aquí, Sonar usará 
+          # automáticamente el archivo sonar-project.properties
+          args: >
+            -Dsonar.branch.name=release/v4.2.x    
