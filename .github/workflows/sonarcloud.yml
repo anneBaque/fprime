@@ -1,11 +1,11 @@
-# Cross-compile https://github.com/fprime-community/fprime-workshop-led-blinker
-# Runs build checks for aarch64-linux
-name: "External Repo: AArch64 Linux LedBlinker"
+# Run suite of CI builds and tests in a RHEL8 container
+name: "CI [RHEL8]"
 
 on:
   push:
     branches: [ devel, "release/**" ]
   pull_request:
+    # The branches below must be a subset of the branches above
     branches: [ devel, "release/**" ]
     paths-ignore:
       - 'docs/**'
@@ -13,78 +13,79 @@ on:
       - '.github/actions/spelling/**'
       - '.github/ISSUE_TEMPLATE/**'
 
+# Cancel in-progress runs if a newer run is started on a given PR
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: ${{ !contains(github.ref, 'devel') && !contains(github.ref, 'release/')}}
 
-env:
-  AARCH64_TOOLCHAIN_DIR: /tmp/aarch64-toolchain
-  AARCH64_TOOLCHAIN_URL: https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu.tar.xz
-  ARM_TOOLS_PATH: /tmp/aarch64-toolchain
-  FPRIME_LOCATION: ./lib/fprime
-
 jobs:
-  get-branch:
-    name: "Get target branch"
-    uses: ./.github/workflows/reusable-get-pr-branch.yml
-    with:
-      target_repository: fprime-community/fprime-workshop-led-blinker
-
-  cross-compilation:
-    name: "Cross Compilation"
-    runs-on: ubuntu-22.04
-    needs: get-branch
+  Framework:
+    runs-on: ubuntu-latest
+    container:
+      image: redhat/ubi8:8.10
     steps:
-      - name: "Checkout target repository"
-        uses: actions/checkout@v4
-        with:
-          submodules: false
-          repository: fprime-community/fprime-workshop-led-blinker
-          ref: ${{ needs.get-branch.outputs.target-branch }}
+    - name: "Install dependencies"
+      run: |
+        dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
+        git config --global --add safe.directory ${GITHUB_WORKSPACE}
+    - name: "Checkout F´ Repository"
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        submodules: true
+    - uses: ./.github/actions/setup
+    - name: Build Framework
+      run: |
+        fprime-util generate -DFPRIME_ENABLE_JSON_MODEL_GENERATION=ON
+        fprime-util build --all -j4
 
-      - name: "Overlay current F´ revision"
-        uses: actions/checkout@v4
-        with:
-          submodules: true
-          path: ${{ env.FPRIME_LOCATION }}
-          fetch-depth: 0
+  Ref:
+    runs-on: ubuntu-latest
+    container:
+      image: redhat/ubi8:8.10
+    steps:
+    - name: "Install dependencies"
+      run: |
+        dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
+        git config --global --add safe.directory ${GITHUB_WORKSPACE}
+    - name: "Checkout F´ Repository"
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        submodules: true
+    - uses: ./.github/actions/setup
+    - name: Build Ref
+      run: |
+        cd Ref
+        fprime-util generate -DFPRIME_ENABLE_JSON_MODEL_GENERATION=ON
+        fprime-util build -j4
 
-      - uses: ./lib/fprime/.github/actions/setup
-        with:
-          location: ${{ env.FPRIME_LOCATION }}
-
-      - name: "Download and Setup AArch64 Linux Toolchain"
-        run: |
-          mkdir -p ${AARCH64_TOOLCHAIN_DIR}
-          wget -q ${AARCH64_TOOLCHAIN_URL}
-          tar -xf $(basename ${AARCH64_TOOLCHAIN_URL}) -C ${AARCH64_TOOLCHAIN_DIR} --strip-components 1
-          echo "${AARCH64_TOOLCHAIN_DIR}/bin" >> $GITHUB_PATH
-
-      - name: "Generate AArch64 Linux Build Cache"
-        run: |
-          fprime-util generate aarch64-linux
-
-      - name: "Build AArch64 Linux"
-        run: |
-          fprime-util build aarch64-linux
-
-      - name: "Archive Build Artifacts"
-        uses: actions/upload-artifact@v4
-        with:
-          name: aarch64-linux-artifacts
-          path: build-artifacts
-          retention-days: 5
-
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-         with:
-          args: >
-            -Dsonar.projectKey=anneBaque_fprime
-            -Dsonar.organization=anneBaque
-            -Dsonar.branch.name=release/v4.2.x
-            -Dsonar.sources=.
-            -Dsonar.cfamily.compile-commands=FppTestProject/build-fprime-automatic-native-ut/compile_commands.json
+  UTs:
+    runs-on: ubuntu-latest
+    container:
+      image: redhat/ubi8:8.10
+    steps:
+    - name: "Install dependencies"
+      run: |
+        dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
+        git config --global --add safe.directory ${GITHUB_WORKSPACE}
+    - name: "Checkout F´ Repository"
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        submodules: true
+    - uses: ./.github/actions/setup
+    
+    # Configuración de usuario para tests de permisos
+    - name: Setup test environment for permission tests
+      run: |
+        useradd -m -u 1001 -s /bin/bash test-user
+        chown -R test-user:test-user .
+        
+    - name: UT Build and Run
+      run: |
+        su test-user -c "
+          fprime-util generate --ut && \
+          fprime-util build --all --ut -j4 && \
+          fprime-util check --all -j4 --pass-through --output-on-failure
+        "
