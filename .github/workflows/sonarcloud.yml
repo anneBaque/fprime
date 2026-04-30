@@ -52,5 +52,10 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+         with:
           args: >
-            -Dsonar.cfamily.compile-commands=build-artifacts/compile_commands.json
+            -Dsonar.projectKey=anneBaque_fprime
+            -Dsonar.organization=anneBaque
+            -Dsonar.branch.name=release/v4.2.x
+            -Dsonar.sources=.
+            -Dsonar.cfamily.compile-commands=FppTestProject/build-fprime-automatic-native-ut/compile_commands.json
