@@ -98,4 +98,9 @@ jobs:
           # Al no poner argumentos de rutas aquí, Sonar usará 
           # automáticamente el archivo sonar-project.properties
           args: >
-            -Dsonar.branch.name=release/v4.2.x    
+            -Dsonar.projectKey=anneBaque_fprime
+            -Dsonar.organization=anneBaque
+            -Dsonar.branch.name=release
+            -Dsonar.sources=Fw
+            -Dsonar.inclusions=Fw/**/*
+            -Dsonar.cfamily.compile-commands=build-artifacts/aarch64-linux/compile_commands.json
