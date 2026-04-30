@@ -13,7 +13,7 @@ on:
   push:
     branches:
       - devel
-      - "release/v4.2.x"  # Debe estar en la lista con un guion
+      - "release/v4.2.x"  # Debe 
   pull_request:
     types: [opened, synchronize, reopened] # Opcional pero recomendado
 
