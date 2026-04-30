@@ -1,50 +1,79 @@
-name: SonarCloud Analysis
+# Cross-compile https://github.com/fprime-community/fprime-workshop-led-blinker
+# Runs build checks for aarch64-linux
+name: "External Repo: AArch64 Linux LedBlinker"
+
 on:
   push:
-    branches: 
-      - devel
-      - "release/**"
-      - "release/v4.2.x" # Añádela explícitamente entre comillas
+    branches: [ devel, "release/**" ]
   pull_request:
-    branches: 
-      - devel
-      - "release/**"
-      - "release/v4.2.x"
-  push:
-    branches:
-      - devel
-      - "release/v4.2.x"  # Debe 
-  pull_request:
-    types: [opened, synchronize, reopened] # Opcional pero recomendado
+    branches: [ devel, "release/**" ]
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '.github/actions/spelling/**'
+      - '.github/ISSUE_TEMPLATE/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ !contains(github.ref, 'devel') && !contains(github.ref, 'release/')}}
+
+env:
+  AARCH64_TOOLCHAIN_DIR: /tmp/aarch64-toolchain
+  AARCH64_TOOLCHAIN_URL: https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu.tar.xz
+  ARM_TOOLS_PATH: /tmp/aarch64-toolchain
+  FPRIME_LOCATION: ./lib/fprime
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  get-branch:
+    name: "Get target branch"
+    uses: ./.github/workflows/reusable-get-pr-branch.yml
+    with:
+      target_repository: fprime-community/fprime-workshop-led-blinker
+
+  cross-compilation:
+    name: "Cross Compilation"
+    runs-on: ubuntu-22.04
+    needs: get-branch
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: "Checkout target repository"
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
+          submodules: false
+          repository: fprime-community/fprime-workshop-led-blinker
+          ref: ${{ needs.get-branch.outputs.target-branch }}
 
-      - name: Set up Java
-        uses: actions/setup-java@v3
+      - name: "Overlay current F´ revision"
+        uses: actions/checkout@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          submodules: true
+          path: ${{ env.FPRIME_LOCATION }}
+          fetch-depth: 0
 
-      - name: Install build tools
-        run: |
-          sudo apt update
-          sudo apt install -y build-essential cmake ninja-build
-          pip install fprime-tools fprime-bootstrap
-          fprime-bootstrap install
+      - uses: ./lib/fprime/.github/actions/setup
+        with:
+          location: ${{ env.FPRIME_LOCATION }}
 
-      - name: Build and Generate Compile Commands
+      - name: "Download and Setup AArch64 Linux Toolchain"
         run: |
-          fprime-util generate
-          # Exportamos los comandos de compilación para que Sonar entienda el C++
-          cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON . 
-          fprime-util build
+          mkdir -p ${AARCH64_TOOLCHAIN_DIR}
+          wget -q ${AARCH64_TOOLCHAIN_URL}
+          tar -xf $(basename ${AARCH64_TOOLCHAIN_URL}) -C ${AARCH64_TOOLCHAIN_DIR} --strip-components 1
+          echo "${AARCH64_TOOLCHAIN_DIR}/bin" >> $GITHUB_PATH
+
+      - name: "Generate AArch64 Linux Build Cache"
+        run: |
+          fprime-util generate aarch64-linux
+
+      - name: "Build AArch64 Linux"
+        run: |
+          fprime-util build aarch64-linux
+
+      - name: "Archive Build Artifacts"
+        uses: actions/upload-artifact@v4
+        with:
+          name: aarch64-linux-artifacts
+          path: build-artifacts
+          retention-days: 5
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
