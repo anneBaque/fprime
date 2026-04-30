@@ -1,6 +1,16 @@
 name: SonarCloud Analysis
 on:
   push:
+    branches: 
+      - devel
+      - "release/**"
+      - "release/v4.2.x" # Añádela explícitamente entre comillas
+  pull_request:
+    branches: 
+      - devel
+      - "release/**"
+      - "release/v4.2.x"
+  push:
     branches:
       - devel
       - "release/v4.2.x"  # Debe estar en la lista con un guion
