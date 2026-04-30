@@ -1,9 +1,12 @@
 name: SonarCloud Analysis
 on:
   push:
-    branches: [ "main" ]
-     release/v4.2.x
+    branches:
+      - main
+      - "release/v4.2.x"  # Debe estar en la lista con un guion
   pull_request:
+    types: [opened, synchronize, reopened] # Opcional pero recomendado
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,30 +14,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Importante para SonarCloud
-          
-      - name: Set up Java (required for SonarCloud)
+          fetch-depth: 0 
+
+      - name: Set up Java
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
-          
+
       - name: Install build tools
         run: |
           sudo apt update
           sudo apt install -y build-essential cmake ninja-build
-          
-      - name: Build project (F Prime) with compile commands
-        run: |
-          pip install fprime-bootstrap
+          pip install fprime-tools fprime-bootstrap
           fprime-bootstrap install
+
+      - name: Build and Generate Compile Commands
+        run: |
           fprime-util generate
-          # Generar compile_commands.json para SonarCloud
-          cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -S . -B build || true
+          # Exportamos los comandos de compilación para que Sonar entienda el C++
+          cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON . 
           fprime-util build
-          
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: >
+            -Dsonar.cfamily.compile-commands=build-artifacts/compile_commands.json
