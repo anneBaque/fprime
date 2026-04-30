@@ -2,7 +2,7 @@ name: SonarCloud Analysis
 on:
   push:
     branches:
-      - main
+      - devel
       - "release/v4.2.x"  # Debe estar en la lista con un guion
   pull_request:
     types: [opened, synchronize, reopened] # Opcional pero recomendado
