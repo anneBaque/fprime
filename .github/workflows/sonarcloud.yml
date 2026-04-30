@@ -1,0 +1,39 @@
+name: SonarCloud Analysis
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Importante para SonarCloud
+          
+      - name: Set up Java (required for SonarCloud)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          
+      - name: Install build tools
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential cmake ninja-build
+          
+      - name: Build project (F Prime) with compile commands
+        run: |
+          pip install fprime-bootstrap
+          fprime-bootstrap install
+          fprime-util generate
+          # Generar compile_commands.json para SonarCloud
+          cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -S . -B build || true
+          fprime-util build
+          
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
