@@ -69,38 +69,30 @@ jobs:
       run: |
         dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
         git config --global --add safe.directory ${GITHUB_WORKSPACE}
+        
     - name: "Checkout F´ Repository"
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
         submodules: true
+
     - uses: ./.github/actions/setup
-    
-    # Configuración de usuario para tests de permisos
-    - name: Setup test environment for permission tests
+
+    - name: "Generate Compile Commands"
+      # Es vital generar esto para que Sonar entienda el C++
       run: |
-        useradd -m -u 1001 -s /bin/bash test-user
-        chown -R test-user:test-user .
-        
-    - name: UT Build and Run
-      run: |
-        su test-user -c "
-          fprime-util generate --ut && \
-          fprime-util build --all --ut -j4 && \
-          fprime-util check --all -j4 --pass-through --output-on-failure
-        "
+        fprime-util generate
+        # Movemos o aseguramos la ruta del compile_commands para Sonar
+        mkdir -p build-artifacts
+        cp build-fprime-automatic-default/compile_commands.json build-artifacts/compile_commands.json
+
     - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # Al no poner argumentos de rutas aquí, Sonar usará 
-          # automáticamente el archivo sonar-project.properties
-          args: >
-            -Dsonar.projectKey=anneBaque_fprime
-            -Dsonar.organization=anneBaque
-            -Dsonar.branch.name=release
-            -Dsonar.sources=Fw
-            -Dsonar.inclusions=Fw/**/*
-            -Dsonar.cfamily.compile-commands=build-artifacts/aarch64-linux/compile_commands.json
+      uses: SonarSource/sonarcloud-github-action@v2
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        # Simplificamos los args. Sonar leerá el sonar-project.properties por defecto.
+        # Solo pasamos variables dinámicas si es estrictamente necesario.
+        args: >
+          -Dsonar.scm.revision=${{ github.event.pull_request.head.sha || github.sha }}
