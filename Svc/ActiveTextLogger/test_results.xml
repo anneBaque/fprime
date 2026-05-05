@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="0.02" timestamp="2026-05-05T19:25:58.055" name="AllTests">
+  <testsuite name="Nominal" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.015" timestamp="2026-05-05T19:25:58.055">
+    <testcase name="Logging" file="/home/anne12/proyectoCS/fprime/Svc/ActiveTextLogger/test/ut/ActiveTextLoggerTestMain.cpp" line="9" status="run" result="completed" time="0.012" timestamp="2026-05-05T19:25:58.055" classname="Nominal" />
+    <testcase name="WorkstationTime" file="/home/anne12/proyectoCS/fprime/Svc/ActiveTextLogger/test/ut/ActiveTextLoggerTestMain.cpp" line="14" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:58.068" classname="Nominal" />
+  </testsuite>
+  <testsuite name="OffNominal" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.004" timestamp="2026-05-05T19:25:58.071">
+    <testcase name="FileHandling" file="/home/anne12/proyectoCS/fprime/Svc/ActiveTextLogger/test/ut/ActiveTextLoggerTestMain.cpp" line="19" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:58.071" classname="OffNominal" />
+  </testsuite>
+</testsuites>

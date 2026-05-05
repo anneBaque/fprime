@@ -46,12 +46,21 @@ jobs:
 
       - name: Run Tests and Generate Evidence
         run: |
-          # 1. Ejecutar tests y guardar resultados en JUnit XML para trazabilidad
           export GTEST_OUTPUT="xml:test_results.xml"
-          fprime-util check || echo "Algunos tests fallaron, analizando resultados..."
+          # Ejecutamos los tests (esto genera los archivos .gcda en la carpeta build-*)
+          fprime-util check || echo "Tests finalizados"
           
-          # 2. Generar XML de cobertura ignorando errores técnicos de gcov
-          gcovr -r . --sonarqube coverage.xml --gcov-ignore-parse-errors=negative_hits.warn
+          # COMANDOS CORREGIDOS:
+          # 1. Instalamos gcovr si no estaba (por seguridad)
+          pip install gcovr
+          
+          # 2. Generamos el XML buscando en toda la raíz y forzando rutas relativas
+          # El flag -f asegura que solo se incluya código del framework, no de los tests
+          gcovr -r . \
+            --sonarqube coverage.xml \
+            --gcov-ignore-parse-errors=negative_hits.warn \
+            --filter Fw/ --filter Os/ --filter Svc/ \
+            --print-summary
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2

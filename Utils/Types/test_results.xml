@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="10" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-05-05T19:27:05.847" name="AllTests">
+  <testsuite name="QueueTest" tests="10" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:27:05.847">
+    <testcase name="FIFOMode" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="33" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.847" classname="QueueTest" />
+    <testcase name="LIFOMode" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="50" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.847" classname="QueueTest" />
+    <testcase name="DropNewestMode" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="67" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+    <testcase name="DropOldestMode" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="89" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+    <testcase name="LIFOWithDropOldest" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="113" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+    <testcase name="DequeueEmpty" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="137" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+    <testcase name="QueueSize" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="148" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+    <testcase name="HighWaterMark" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="171" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+    <testcase name="AlternatingFIFO" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="195" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+    <testcase name="AlternatingLIFO" file="/home/anne12/proyectoCS/fprime/Utils/Types/test/ut/Queue/QueueTest.cpp" line="210" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.848" classname="QueueTest" />
+  </testsuite>
+</testsuites>

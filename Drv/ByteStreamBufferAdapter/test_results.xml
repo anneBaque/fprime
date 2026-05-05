@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.003" timestamp="2026-05-05T19:26:57.857" name="AllTests">
+  <testsuite name="Nominal" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-05-05T19:26:57.857">
+    <testcase name="Test_Stream_out" file="/home/anne12/proyectoCS/fprime/Drv/ByteStreamBufferAdapter/test/ut/ByteStreamBufferAdapterTestMain.cpp" line="9" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:26:57.857" classname="Nominal" />
+    <testcase name="Test_Stream_in" file="/home/anne12/proyectoCS/fprime/Drv/ByteStreamBufferAdapter/test/ut/ByteStreamBufferAdapterTestMain.cpp" line="14" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:57.859" classname="Nominal" />
+    <testcase name="Test_Stream_Return" file="/home/anne12/proyectoCS/fprime/Drv/ByteStreamBufferAdapter/test/ut/ByteStreamBufferAdapterTestMain.cpp" line="19" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:57.860" classname="Nominal" />
+    <testcase name="Test_Driver_Ready_State" file="/home/anne12/proyectoCS/fprime/Drv/ByteStreamBufferAdapter/test/ut/ByteStreamBufferAdapterTestMain.cpp" line="24" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:57.860" classname="Nominal" />
+  </testsuite>
+</testsuites>

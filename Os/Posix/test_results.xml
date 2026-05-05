@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="7" failures="0" disabled="0" errors="0" time="0.024" timestamp="2026-05-05T19:26:51.256" name="AllTests">
+  <testsuite name="Functionality" tests="7" failures="0" disabled="0" skipped="0" errors="0" time="0.023" timestamp="2026-05-05T19:26:51.256">
+    <testcase name="Now" file="/home/anne12/proyectoCS/fprime/Os/test/ut/rawtime/CommonTests.cpp" line="45" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.256" classname="Functionality" />
+    <testcase name="SelfDiffIsZero" file="/home/anne12/proyectoCS/fprime/Os/test/ut/rawtime/CommonTests.cpp" line="51" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.256" classname="Functionality" />
+    <testcase name="GetTimeDiffU32" file="/home/anne12/proyectoCS/fprime/Os/test/ut/rawtime/CommonTests.cpp" line="57" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.257" classname="Functionality" />
+    <testcase name="GetTimeInterval" file="/home/anne12/proyectoCS/fprime/Os/test/ut/rawtime/CommonTests.cpp" line="63" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.257" classname="Functionality" />
+    <testcase name="Serialization" file="/home/anne12/proyectoCS/fprime/Os/test/ut/rawtime/CommonTests.cpp" line="69" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.257" classname="Functionality" />
+    <testcase name="DiffU32Overflow" file="/home/anne12/proyectoCS/fprime/Os/test/ut/rawtime/CommonTests.cpp" line="75" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.258" classname="Functionality" />
+    <testcase name="RandomizedTesting" file="/home/anne12/proyectoCS/fprime/Os/test/ut/rawtime/CommonTests.cpp" line="81" status="run" result="completed" time="0.021" timestamp="2026-05-05T19:26:51.258" classname="Functionality" />
+  </testsuite>
+</testsuites>

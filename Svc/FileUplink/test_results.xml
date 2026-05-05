@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="12" failures="0" disabled="0" errors="0" time="0.014" timestamp="2026-05-05T19:25:53.959" name="AllTests">
+  <testsuite name="FileUplink" tests="12" failures="0" disabled="0" skipped="0" errors="0" time="0.013" timestamp="2026-05-05T19:25:53.959">
+    <testcase name="SendFile" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="7" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:53.959" classname="FileUplink" />
+    <testcase name="BadChecksum" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="12" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:53.963" classname="FileUplink" />
+    <testcase name="FileOpenError" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="17" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.965" classname="FileUplink" />
+    <testcase name="FileWriteError" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="22" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.965" classname="FileUplink" />
+    <testcase name="StartPacketInDataMode" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="27" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.966" classname="FileUplink" />
+    <testcase name="DataPacketInStartMode" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="32" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.967" classname="FileUplink" />
+    <testcase name="EndPacketInStartMode" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="37" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.968" classname="FileUplink" />
+    <testcase name="PacketOutOfBounds" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="42" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.969" classname="FileUplink" />
+    <testcase name="PacketOutOfOrder" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="47" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.970" classname="FileUplink" />
+    <testcase name="PacketDuplicated" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="52" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.970" classname="FileUplink" />
+    <testcase name="CancelPacketInStartMode" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="57" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.971" classname="FileUplink" />
+    <testcase name="CancelPacketInDataMode" file="/home/anne12/proyectoCS/fprime/Svc/FileUplink/test/ut/FileUplinkMain.cpp" line="62" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.972" classname="FileUplink" />
+  </testsuite>
+</testsuites>

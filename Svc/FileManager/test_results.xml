@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="19" failures="0" disabled="0" errors="0" time="0.122" timestamp="2026-05-05T19:25:53.800" name="AllTests">
+  <testsuite name="Test" tests="19" failures="0" disabled="0" skipped="0" errors="0" time="0.121" timestamp="2026-05-05T19:25:53.800">
+    <testcase name="createDirectorySucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="7" status="run" result="completed" time="0.007" timestamp="2026-05-05T19:25:53.800" classname="Test" />
+    <testcase name="createDirectoryFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="12" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:53.808" classname="Test" />
+    <testcase name="moveFileSucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="17" status="run" result="completed" time="0.007" timestamp="2026-05-05T19:25:53.814" classname="Test" />
+    <testcase name="moveFileFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="22" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:53.821" classname="Test" />
+    <testcase name="removeDirectorySucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="27" status="run" result="completed" time="0.007" timestamp="2026-05-05T19:25:53.824" classname="Test" />
+    <testcase name="removeDirectoryFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="32" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:53.832" classname="Test" />
+    <testcase name="removeFileSucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="37" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:53.836" classname="Test" />
+    <testcase name="removeFileFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="42" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:53.841" classname="Test" />
+    <testcase name="shellCommandSucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="47" status="run" result="completed" time="0.006" timestamp="2026-05-05T19:25:53.844" classname="Test" />
+    <testcase name="shellCommandFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="52" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:53.851" classname="Test" />
+    <testcase name="appendFileSucceedNewFile" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="57" status="run" result="completed" time="0.011" timestamp="2026-05-05T19:25:53.856" classname="Test" />
+    <testcase name="appendFileSucceedExistingFile" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="62" status="run" result="completed" time="0.012" timestamp="2026-05-05T19:25:53.868" classname="Test" />
+    <testcase name="appendFileFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="67" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:53.881" classname="Test" />
+    <testcase name="fileSizeSucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="72" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:53.883" classname="Test" />
+    <testcase name="fileSizeFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="77" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:53.886" classname="Test" />
+    <testcase name="calculateCrcSucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="82" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:53.889" classname="Test" />
+    <testcase name="listDirectorySucceed" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="87" status="run" result="completed" time="0.009" timestamp="2026-05-05T19:25:53.892" classname="Test" />
+    <testcase name="listDirectoryFail" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="92" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:53.901" classname="Test" />
+    <testcase name="listDirectoryWithSubdirs" file="/home/anne12/proyectoCS/fprime/Svc/FileManager/test/ut/FileManagerMain.cpp" line="97" status="run" result="completed" time="0.018" timestamp="2026-05-05T19:25:53.903" classname="Test" />
+  </testsuite>
+</testsuites>

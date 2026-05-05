@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="13" failures="0" disabled="0" errors="0" time="0.037" timestamp="2026-05-05T19:25:57.942" name="AllTests">
+  <testsuite name="TestNominal" tests="12" failures="0" disabled="0" skipped="1" errors="0" time="0.034" timestamp="2026-05-05T19:25:57.942">
+    <testcase name="Initialization" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="10" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:57.942" classname="TestNominal" />
+    <testcase name="PushTlm" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="16" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:57.947" classname="TestNominal" />
+    <testcase name="SendPackets" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="22" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:57.950" classname="TestNominal" />
+    <testcase name="UpdatePacketsTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="35" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.954" classname="TestNominal" />
+    <testcase name="PingTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="41" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.957" classname="TestNominal" />
+    <testcase name="IgnoredChannelTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="47" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.959" classname="TestNominal" />
+    <testcase name="SendPacketTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="53" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.962" classname="TestNominal" />
+    <testcase name="TlmGetTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="72" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.965" classname="TestNominal" />
+    <testcase name="configuredTelemetryGroupsTests" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="77" status="run" result="skipped" time="0.002" timestamp="2026-05-05T19:25:57.967" classname="TestNominal">
+      <skipped message="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/TlmPacketizerTester.cpp:1035&#x0A;This test cannot run with reused ports. Found duplicate port: 0"><![CDATA[/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/TlmPacketizerTester.cpp:1035
+This test cannot run with reused ports. Found duplicate port: 0]]></skipped>
+    </testcase>
+    <testcase name="advancedControlGroupTests" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="82" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.970" classname="TestNominal" />
+    <testcase name="sectionEnabledParameterTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="88" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.973" classname="TestNominal" />
+    <testcase name="sectionConfigParameterTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="94" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.975" classname="TestNominal" />
+  </testsuite>
+  <testsuite name="TestOffNominal" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-05-05T19:25:57.977">
+    <testcase name="NonPacketizedChannelTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmPacketizer/test/ut/main.cpp" line="66" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.977" classname="TestOffNominal" />
+  </testsuite>
+</testsuites>

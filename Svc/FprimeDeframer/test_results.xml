@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="0" disabled="0" errors="0" time="0.003" timestamp="2026-05-05T19:25:54.120" name="AllTests">
+  <testsuite name="FprimeDeframer" tests="8" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-05-05T19:25:54.120">
+    <testcase name="NominalFrame" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="10" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:54.120" classname="FprimeDeframer" />
+    <testcase name="NominalFrameApid" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="15" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.122" classname="FprimeDeframer" />
+    <testcase name="TruncatedFrame" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="20" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.122" classname="FprimeDeframer" />
+    <testcase name="ZeroSizeFrame" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="25" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.123" classname="FprimeDeframer" />
+    <testcase name="testIncorrectLengthToken" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="30" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.123" classname="FprimeDeframer" />
+    <testcase name="testIncorrectStartWord" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="35" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.123" classname="FprimeDeframer" />
+    <testcase name="testIncorrectCrc" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="40" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.123" classname="FprimeDeframer" />
+    <testcase name="testDataReturn" file="/home/anne12/proyectoCS/fprime/Svc/FprimeDeframer/test/ut/FprimeDeframerTestMain.cpp" line="45" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.123" classname="FprimeDeframer" />
+  </testsuite>
+</testsuites>

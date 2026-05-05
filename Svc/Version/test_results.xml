@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="0.033" timestamp="2026-05-05T19:26:04.189" name="AllTests">
+  <testsuite name="Nominal" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.032" timestamp="2026-05-05T19:26:04.189">
+    <testcase name="test_startup" file="/home/anne12/proyectoCS/fprime/Svc/Version/test/ut/VersionTestMain.cpp" line="9" status="run" result="completed" time="0.016" timestamp="2026-05-05T19:26:04.189" classname="Nominal" />
+    <testcase name="test_cmds" file="/home/anne12/proyectoCS/fprime/Svc/Version/test/ut/VersionTestMain.cpp" line="14" status="run" result="completed" time="0.011" timestamp="2026-05-05T19:26:04.206" classname="Nominal" />
+    <testcase name="test_ports" file="/home/anne12/proyectoCS/fprime/Svc/Version/test/ut/VersionTestMain.cpp" line="19" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:26:04.218" classname="Nominal" />
+  </testsuite>
+</testsuites>

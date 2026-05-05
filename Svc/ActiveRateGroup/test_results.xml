@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="0.008" timestamp="2026-05-05T19:25:19.115" name="AllTests">
+  <testsuite name="ActiveRateGroupTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.007" timestamp="2026-05-05T19:25:19.116">
+    <testcase name="NominalSchedule" file="/home/anne12/proyectoCS/fprime/Svc/ActiveRateGroup/test/ut/ActiveRateGroupTestMain.cpp" line="49" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:19.116" classname="ActiveRateGroupTest" />
+    <testcase name="CycleOverrun" file="/home/anne12/proyectoCS/fprime/Svc/ActiveRateGroup/test/ut/ActiveRateGroupTestMain.cpp" line="71" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:19.119" classname="ActiveRateGroupTest" />
+    <testcase name="PingPort" file="/home/anne12/proyectoCS/fprime/Svc/ActiveRateGroup/test/ut/ActiveRateGroupTestMain.cpp" line="93" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.122" classname="ActiveRateGroupTest" />
+  </testsuite>
+</testsuites>

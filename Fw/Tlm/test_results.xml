@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" disabled="0" errors="0" time="0" timestamp="2026-05-05T19:25:17.101" name="AllTests">
+  <testsuite name="FwTlmTest" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:25:17.102">
+    <testcase name="TlmPacketSerializeSingle" file="/home/anne12/proyectoCS/fprime/Fw/Tlm/test/ut/TlmTest.cpp" line="5" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:17.102" classname="FwTlmTest" />
+    <testcase name="TlmPacketSerializeFill" file="/home/anne12/proyectoCS/fprime/Fw/Tlm/test/ut/TlmTest.cpp" line="37" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:17.102" classname="FwTlmTest" />
+  </testsuite>
+</testsuites>

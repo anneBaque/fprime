@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" time="4.249" timestamp="2026-05-05T19:27:01.482" name="AllTests">
+  <testsuite name="RateLimiterTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="4.234" timestamp="2026-05-05T19:27:01.483">
+    <testcase name="TestCounterTriggering" file="/home/anne12/proyectoCS/fprime/Utils/test/ut/main.cpp" line="8" status="run" result="completed" time="0.026" timestamp="2026-05-05T19:27:01.483" classname="RateLimiterTest" />
+    <testcase name="TestTimeTriggering" file="/home/anne12/proyectoCS/fprime/Utils/test/ut/main.cpp" line="13" status="run" result="completed" time="1.183" timestamp="2026-05-05T19:27:01.509" classname="RateLimiterTest" />
+    <testcase name="TestCounterAndTimeTriggering" file="/home/anne12/proyectoCS/fprime/Utils/test/ut/main.cpp" line="18" status="run" result="completed" time="3.024" timestamp="2026-05-05T19:27:02.693" classname="RateLimiterTest" />
+  </testsuite>
+  <testsuite name="TokenBucketTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.014" timestamp="2026-05-05T19:27:05.717">
+    <testcase name="TestTriggering" file="/home/anne12/proyectoCS/fprime/Utils/test/ut/main.cpp" line="23" status="run" result="completed" time="0.013" timestamp="2026-05-05T19:27:05.717" classname="TokenBucketTest" />
+    <testcase name="TestReconfiguring" file="/home/anne12/proyectoCS/fprime/Utils/test/ut/main.cpp" line="28" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.731" classname="TokenBucketTest" />
+    <testcase name="TestInitialSettings" file="/home/anne12/proyectoCS/fprime/Utils/test/ut/main.cpp" line="33" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:05.732" classname="TokenBucketTest" />
+  </testsuite>
+</testsuites>

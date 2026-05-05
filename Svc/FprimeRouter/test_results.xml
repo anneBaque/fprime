@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="0" disabled="0" errors="0" time="0.005" timestamp="2026-05-05T19:25:54.186" name="AllTests">
+  <testsuite name="FprimeRouter" tests="8" failures="0" disabled="0" skipped="0" errors="0" time="0.005" timestamp="2026-05-05T19:25:54.187">
+    <testcase name="TestComInterface" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="11" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:54.187" classname="FprimeRouter" />
+    <testcase name="TestFileInterface" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="16" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.189" classname="FprimeRouter" />
+    <testcase name="TestUnknownInterface" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="21" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.189" classname="FprimeRouter" />
+    <testcase name="TestRouteUnknownPacketUnconnected" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="26" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.190" classname="FprimeRouter" />
+    <testcase name="TestAllocationFailureFile" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="31" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.190" classname="FprimeRouter" />
+    <testcase name="TestAllocationFailureUnknown" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="36" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.190" classname="FprimeRouter" />
+    <testcase name="TestBufferReturn" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="41" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.191" classname="FprimeRouter" />
+    <testcase name="TestCommandResponse" file="/home/anne12/proyectoCS/fprime/Svc/FprimeRouter/test/ut/FprimeRouterTestMain.cpp" line="46" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.191" classname="FprimeRouter" />
+  </testsuite>
+</testsuites>

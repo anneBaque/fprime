@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="7" failures="0" disabled="0" errors="0" time="2.616" timestamp="2026-05-05T19:25:54.391" name="AllTests">
+  <testsuite name="Nominal" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="2.592" timestamp="2026-05-05T19:25:54.391">
+    <testcase name="TestIo" file="/home/anne12/proyectoCS/fprime/Svc/GenericHub/test/ut/GenericHubTestMain.cpp" line="7" status="run" result="completed" time="0.028" timestamp="2026-05-05T19:25:54.392" classname="Nominal" />
+    <testcase name="TestBufferIo" file="/home/anne12/proyectoCS/fprime/Svc/GenericHub/test/ut/GenericHubTestMain.cpp" line="12" status="run" result="completed" time="0.027" timestamp="2026-05-05T19:25:54.420" classname="Nominal" />
+    <testcase name="TestRandomIo" file="/home/anne12/proyectoCS/fprime/Svc/GenericHub/test/ut/GenericHubTestMain.cpp" line="17" status="run" result="completed" time="2.447" timestamp="2026-05-05T19:25:54.448" classname="Nominal" />
+    <testcase name="TestEvents" file="/home/anne12/proyectoCS/fprime/Svc/GenericHub/test/ut/GenericHubTestMain.cpp" line="22" status="run" result="completed" time="0.021" timestamp="2026-05-05T19:25:56.896" classname="Nominal" />
+    <testcase name="TestTelemetry" file="/home/anne12/proyectoCS/fprime/Svc/GenericHub/test/ut/GenericHubTestMain.cpp" line="27" status="run" result="completed" time="0.039" timestamp="2026-05-05T19:25:56.918" classname="Nominal" />
+    <testcase name="TestCommands" file="/home/anne12/proyectoCS/fprime/Svc/GenericHub/test/ut/GenericHubTestMain.cpp" line="32" status="run" result="completed" time="0.025" timestamp="2026-05-05T19:25:56.958" classname="Nominal" />
+  </testsuite>
+  <testsuite name="Invalid" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.023" timestamp="2026-05-05T19:25:56.983">
+    <testcase name="TestDeserializationGuards" file="/home/anne12/proyectoCS/fprime/Svc/GenericHub/test/ut/GenericHubTestMain.cpp" line="37" status="run" result="completed" time="0.023" timestamp="2026-05-05T19:25:56.983" classname="Invalid" />
+  </testsuite>
+</testsuites>

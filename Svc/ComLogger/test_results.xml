@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="7" failures="0" disabled="0" errors="0" time="0.132" timestamp="2026-05-05T19:25:19.614" name="AllTests">
+  <testsuite name="Test" tests="7" failures="0" disabled="0" skipped="0" errors="0" time="0.131" timestamp="2026-05-05T19:25:19.614">
+    <testcase name="testLogging" file="/home/anne12/proyectoCS/fprime/Svc/ComLogger/test/ut/ComLoggerMain.cpp" line="9" status="run" result="completed" time="0.048" timestamp="2026-05-05T19:25:19.614" classname="Test" />
+    <testcase name="testLoggingNoLength" file="/home/anne12/proyectoCS/fprime/Svc/ComLogger/test/ut/ComLoggerMain.cpp" line="14" status="run" result="completed" time="0.017" timestamp="2026-05-05T19:25:19.663" classname="Test" />
+    <testcase name="openError" file="/home/anne12/proyectoCS/fprime/Svc/ComLogger/test/ut/ComLoggerMain.cpp" line="19" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:19.681" classname="Test" />
+    <testcase name="writeError" file="/home/anne12/proyectoCS/fprime/Svc/ComLogger/test/ut/ComLoggerMain.cpp" line="24" status="run" result="completed" time="0.009" timestamp="2026-05-05T19:25:19.685" classname="Test" />
+    <testcase name="closeFileCommand" file="/home/anne12/proyectoCS/fprime/Svc/ComLogger/test/ut/ComLoggerMain.cpp" line="29" status="run" result="completed" time="0.007" timestamp="2026-05-05T19:25:19.695" classname="Test" />
+    <testcase name="testLoggingWithInit" file="/home/anne12/proyectoCS/fprime/Svc/ComLogger/test/ut/ComLoggerMain.cpp" line="34" status="run" result="completed" time="0.04" timestamp="2026-05-05T19:25:19.702" classname="Test" />
+    <testcase name="noInitError" file="/home/anne12/proyectoCS/fprime/Svc/ComLogger/test/ut/ComLoggerMain.cpp" line="39" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:19.743" classname="Test" />
+  </testsuite>
+</testsuites>

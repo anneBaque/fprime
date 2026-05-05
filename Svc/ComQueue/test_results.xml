@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="22" failures="0" disabled="0" errors="0" time="0.022" timestamp="2026-05-05T19:25:19.789" name="AllTests">
+  <testsuite name="Nominal" tests="9" failures="0" disabled="0" skipped="0" errors="0" time="0.013" timestamp="2026-05-05T19:25:19.790">
+    <testcase name="Send" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="7" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:19.790" classname="Nominal" />
+    <testcase name="Flush" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="12" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.795" classname="Nominal" />
+    <testcase name="FlushAll" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="17" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.796" classname="Nominal" />
+    <testcase name="Pause" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="22" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.797" classname="Nominal" />
+    <testcase name="Priority" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="27" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.798" classname="Nominal" />
+    <testcase name="ExternalQueueOverflow" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="32" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.799" classname="Nominal" />
+    <testcase name="InternalQueueOverflow" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="37" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.801" classname="Nominal" />
+    <testcase name="ReadyFirst" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="42" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.801" classname="Nominal" />
+    <testcase name="ContextData" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="47" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.802" classname="Nominal" />
+  </testsuite>
+  <testsuite name="QueueModes" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:19.803">
+    <testcase name="FIFOMode" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="52" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.803" classname="QueueModes" />
+    <testcase name="LIFOMode" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="57" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.804" classname="QueueModes" />
+  </testsuite>
+  <testsuite name="OverflowModes" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:19.804">
+    <testcase name="DropNewest" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="62" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.805" classname="OverflowModes" />
+    <testcase name="DropOldest" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="67" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.805" classname="OverflowModes" />
+  </testsuite>
+  <testsuite name="CombinedModes" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:25:19.806">
+    <testcase name="LIFOWithDropOldest" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="72" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.806" classname="CombinedModes" />
+  </testsuite>
+  <testsuite name="BufferQueueModes" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:19.807">
+    <testcase name="FIFOMode" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="77" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.807" classname="BufferQueueModes" />
+    <testcase name="LIFOMode" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="82" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.808" classname="BufferQueueModes" />
+  </testsuite>
+  <testsuite name="BufferQueueOverflowModes" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:25:19.808">
+    <testcase name="DropOldest" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="87" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.808" classname="BufferQueueOverflowModes" />
+  </testsuite>
+  <testsuite name="Commands" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-05-05T19:25:19.809">
+    <testcase name="SetQueuePriority" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="92" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.809" classname="Commands" />
+    <testcase name="SetQueuePriorityInvalidIndex" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="97" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.810" classname="Commands" />
+    <testcase name="SetQueuePriorityNegativeIndex" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="102" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.810" classname="Commands" />
+    <testcase name="SetQueuePriorityInvalidPriority" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="107" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.811" classname="Commands" />
+    <testcase name="SetQueuePriorityNegativePriority" file="/home/anne12/proyectoCS/fprime/Svc/ComQueue/test/ut/ComQueueTestMain.cpp" line="112" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.811" classname="Commands" />
+  </testsuite>
+</testsuites>

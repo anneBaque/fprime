@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="19" failures="0" disabled="0" errors="0" time="29.613" timestamp="2026-05-05T19:25:20.375" name="AllTests">
+  <testsuite name="NominalManual" tests="19" failures="0" disabled="0" skipped="0" errors="0" time="29.612" timestamp="2026-05-05T19:25:20.375">
+    <testcase name="initTest" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="12" status="run" result="completed" time="0.013" timestamp="2026-05-05T19:25:20.375" classname="NominalManual" />
+    <testcase name="TreeTestManual1" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="17" status="run" result="completed" time="0.012" timestamp="2026-05-05T19:25:20.388" classname="NominalManual" />
+    <testcase name="TreeTestManual2" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="22" status="run" result="completed" time="0.023" timestamp="2026-05-05T19:25:20.401" classname="NominalManual" />
+    <testcase name="TreeTestManual3" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="27" status="run" result="completed" time="0.051" timestamp="2026-05-05T19:25:20.424" classname="NominalManual" />
+    <testcase name="TreeTestManual5" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="32" status="run" result="completed" time="0.014" timestamp="2026-05-05T19:25:20.476" classname="NominalManual" />
+    <testcase name="TreeTestRandom" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="37" status="run" result="completed" time="5.498" timestamp="2026-05-05T19:25:20.490" classname="NominalManual" />
+    <testcase name="TreeTestRandomTransmitted" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="45" status="run" result="completed" time="1.283" timestamp="2026-05-05T19:25:25.989" classname="NominalManual" />
+    <testcase name="OneDp" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="50" status="run" result="completed" time="0.022" timestamp="2026-05-05T19:25:27.273" classname="NominalManual" />
+    <testcase name="FiveDp" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="67" status="run" result="completed" time="0.029" timestamp="2026-05-05T19:25:27.296" classname="NominalManual" />
+    <testcase name="TwoDp_OneNotify" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="114" status="run" result="completed" time="0.034" timestamp="2026-05-05T19:25:27.325" classname="NominalManual" />
+    <testcase name="SixDp_ThreeNotify" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="139" status="run" result="completed" time="0.037" timestamp="2026-05-05T19:25:27.359" classname="NominalManual" />
+    <testcase name="SixDp_ThreeStop" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="193" status="run" result="completed" time="0.037" timestamp="2026-05-05T19:25:27.397" classname="NominalManual" />
+    <testcase name="TwoDp_OneStop" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="247" status="run" result="completed" time="0.02" timestamp="2026-05-05T19:25:27.435" classname="NominalManual" />
+    <testcase name="RandomDp" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="272" status="run" result="completed" time="22.471" timestamp="2026-05-05T19:25:27.456" classname="NominalManual" />
+    <testcase name="XmitBeforeInit" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="277" status="run" result="completed" time="0.011" timestamp="2026-05-05T19:25:52.861" classname="NominalManual" />
+    <testcase name="StopWarn" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="282" status="run" result="completed" time="0.012" timestamp="2026-05-05T19:25:52.872" classname="NominalManual" />
+    <testcase name="CompareEntries" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="287" status="run" result="completed" time="0.01" timestamp="2026-05-05T19:25:52.885" classname="NominalManual" />
+    <testcase name="PingIn" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="292" status="run" result="completed" time="0.014" timestamp="2026-05-05T19:25:52.895" classname="NominalManual" />
+    <testcase name="BadFileDone" file="/home/anne12/proyectoCS/fprime/Svc/DpCatalog/test/ut/DpCatalogTestMain.cpp" line="297" status="run" result="completed" time="0.012" timestamp="2026-05-05T19:25:52.909" classname="NominalManual" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.008" timestamp="2026-05-05T19:25:54.076" name="AllTests">
+  <testsuite name="Nominal" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.007" timestamp="2026-05-05T19:25:54.076">
+    <testcase name="testReadErr" file="/home/anne12/proyectoCS/fprime/Svc/FileWorker/test/ut/FileWorkerErrTestMain.cpp" line="9" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:54.076" classname="Nominal" />
+    <testcase name="testVerifyErr" file="/home/anne12/proyectoCS/fprime/Svc/FileWorker/test/ut/FileWorkerErrTestMain.cpp" line="14" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.080" classname="Nominal" />
+    <testcase name="testWriteErr" file="/home/anne12/proyectoCS/fprime/Svc/FileWorker/test/ut/FileWorkerErrTestMain.cpp" line="19" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.081" classname="Nominal" />
+    <testcase name="testWriteHashErr" file="/home/anne12/proyectoCS/fprime/Svc/FileWorker/test/ut/FileWorkerErrTestMain.cpp" line="24" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:54.081" classname="Nominal" />
+  </testsuite>
+</testsuites>

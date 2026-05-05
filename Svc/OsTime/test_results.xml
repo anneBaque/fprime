@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.003" timestamp="2026-05-05T19:25:57.592" name="AllTests">
+  <testsuite name="Nominal" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-05-05T19:25:57.593">
+    <testcase name="ZeroEpochTest" file="/home/anne12/proyectoCS/fprime/Svc/OsTime/test/ut/OsTimeTestMain.cpp" line="9" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.593" classname="Nominal" />
+    <testcase name="OffsetEpochTest" file="/home/anne12/proyectoCS/fprime/Svc/OsTime/test/ut/OsTimeTestMain.cpp" line="14" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.595" classname="Nominal" />
+    <testcase name="NoEpochTest" file="/home/anne12/proyectoCS/fprime/Svc/OsTime/test/ut/OsTimeTestMain.cpp" line="19" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.595" classname="Nominal" />
+    <testcase name="UpdateEpochTest" file="/home/anne12/proyectoCS/fprime/Svc/OsTime/test/ut/OsTimeTestMain.cpp" line="24" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.596" classname="Nominal" />
+  </testsuite>
+</testsuites>

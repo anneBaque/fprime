@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:57.671" name="AllTests">
+  <testsuite name="CmdDispTestNominal" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:57.671">
+    <testcase name="NominalReadWrite" file="/home/anne12/proyectoCS/fprime/Svc/PolyDb/test/ut/PolyDbTestMain.cpp" line="10" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.671" classname="CmdDispTestNominal" />
+  </testsuite>
+</testsuites>

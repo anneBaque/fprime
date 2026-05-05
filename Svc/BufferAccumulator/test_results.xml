@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" time="0.009" timestamp="2026-05-05T19:25:19.209" name="AllTests">
+  <testsuite name="TestErrors" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-05-05T19:25:19.209">
+    <testcase name="QueueFull" file="/home/anne12/proyectoCS/fprime/Svc/BufferAccumulator/test/ut/BufferAccumulatorMain.cpp" line="23" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:19.209" classname="TestErrors" />
+    <testcase name="PartialDrain" file="/home/anne12/proyectoCS/fprime/Svc/BufferAccumulator/test/ut/BufferAccumulatorMain.cpp" line="28" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.213" classname="TestErrors" />
+  </testsuite>
+  <testsuite name="TestAccumulate" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:19.213">
+    <testcase name="OK" file="/home/anne12/proyectoCS/fprime/Svc/BufferAccumulator/test/ut/BufferAccumulatorMain.cpp" line="37" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.213" classname="TestAccumulate" />
+  </testsuite>
+  <testsuite name="TestDrain" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:19.215">
+    <testcase name="OK" file="/home/anne12/proyectoCS/fprime/Svc/BufferAccumulator/test/ut/BufferAccumulatorMain.cpp" line="46" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.215" classname="TestDrain" />
+  </testsuite>
+  <testsuite name="TestPartialDrain" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-05-05T19:25:19.216">
+    <testcase name="OK" file="/home/anne12/proyectoCS/fprime/Svc/BufferAccumulator/test/ut/BufferAccumulatorMain.cpp" line="51" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.216" classname="TestPartialDrain" />
+  </testsuite>
+  <testsuite name="TestHealth" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:25:19.218">
+    <testcase name="Ping" file="/home/anne12/proyectoCS/fprime/Svc/BufferAccumulator/test/ut/BufferAccumulatorMain.cpp" line="60" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.218" classname="TestHealth" />
+  </testsuite>
+</testsuites>

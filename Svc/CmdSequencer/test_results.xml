@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="72" failures="0" disabled="0" errors="0" time="0.253" timestamp="2026-05-05T19:25:20.022" name="AllTests">
+  <testsuite name="AMPCS" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.015" timestamp="2026-05-05T19:25:20.023">
+    <testcase name="MissingCRC" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="25" status="run" result="completed" time="0.009" timestamp="2026-05-05T19:25:20.023" classname="AMPCS" />
+    <testcase name="MissingFile" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="30" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:20.032" classname="AMPCS" />
+  </testsuite>
+  <testsuite name="Health" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:25:20.038">
+    <testcase name="Ping" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="35" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.038" classname="Health" />
+  </testsuite>
+  <testsuite name="Immediate" tests="27" failures="0" disabled="0" skipped="0" errors="0" time="0.116" timestamp="2026-05-05T19:25:20.039">
+    <testcase name="AutoByCommand" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="41" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.039" classname="Immediate" />
+    <testcase name="AutoByCommandAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="46" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:20.042" classname="Immediate" />
+    <testcase name="AutoByPort" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="51" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.048" classname="Immediate" />
+    <testcase name="AutoByFileDispatcherPort" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="56" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.052" classname="Immediate" />
+    <testcase name="AutoByPortAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="61" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.055" classname="Immediate" />
+    <testcase name="Cancel" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="66" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.059" classname="Immediate" />
+    <testcase name="CancelAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="71" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.062" classname="Immediate" />
+    <testcase name="FailedCommands" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="76" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.067" classname="Immediate" />
+    <testcase name="FailedCommandsAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="82" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.070" classname="Immediate" />
+    <testcase name="FileErrors" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="87" status="run" result="completed" time="0.006" timestamp="2026-05-05T19:25:20.074" classname="Immediate" />
+    <testcase name="FileErrorsAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="92" status="run" result="completed" time="0.009" timestamp="2026-05-05T19:25:20.080" classname="Immediate" />
+    <testcase name="InvalidManualCommands" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="97" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.090" classname="Immediate" />
+    <testcase name="InvalidManualCommandsAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="102" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.092" classname="Immediate" />
+    <testcase name="LoadOnInit" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="107" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.096" classname="Immediate" />
+    <testcase name="LoadRunRun" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="112" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.099" classname="Immediate" />
+    <testcase name="LoadOnInitAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="117" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.102" classname="Immediate" />
+    <testcase name="Manual" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="122" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.106" classname="Immediate" />
+    <testcase name="ManualAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="128" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.109" classname="Immediate" />
+    <testcase name="NeverLoaded" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="133" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.113" classname="Immediate" />
+    <testcase name="NewSequence" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="138" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.114" classname="Immediate" />
+    <testcase name="NewSequenceAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="143" status="run" result="completed" time="0.006" timestamp="2026-05-05T19:25:20.117" classname="Immediate" />
+    <testcase name="SequenceTimeout" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="148" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.124" classname="Immediate" />
+    <testcase name="SequenceTimeoutAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="153" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:20.128" classname="Immediate" />
+    <testcase name="UnexpectedCommandResponse" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="158" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.134" classname="Immediate" />
+    <testcase name="UnexpectedCommandResponseAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="163" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:20.138" classname="Immediate" />
+    <testcase name="Validate" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="168" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.144" classname="Immediate" />
+    <testcase name="ValidateAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="173" status="run" result="completed" time="0.007" timestamp="2026-05-05T19:25:20.147" classname="Immediate" />
+  </testsuite>
+  <testsuite name="ImmediateEOS" tests="10" failures="0" disabled="0" skipped="0" errors="0" time="0.045" timestamp="2026-05-05T19:25:20.156">
+    <testcase name="AutoByCommand" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="178" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.156" classname="ImmediateEOS" />
+    <testcase name="AutoByPort" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="184" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.160" classname="ImmediateEOS" />
+    <testcase name="Cancel" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="190" status="run" result="completed" time="0.006" timestamp="2026-05-05T19:25:20.164" classname="ImmediateEOS" />
+    <testcase name="FileErrors" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="196" status="run" result="completed" time="0.008" timestamp="2026-05-05T19:25:20.171" classname="ImmediateEOS" />
+    <testcase name="InvalidManualCommands" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="202" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.180" classname="ImmediateEOS" />
+    <testcase name="Manual" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="208" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.184" classname="ImmediateEOS" />
+    <testcase name="NewSequence" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="214" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.188" classname="ImmediateEOS" />
+    <testcase name="SequenceTimeout" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="220" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.192" classname="ImmediateEOS" />
+    <testcase name="UnexpectedCommandResponse" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="226" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.196" classname="ImmediateEOS" />
+    <testcase name="Validate" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="232" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.199" classname="ImmediateEOS" />
+  </testsuite>
+  <testsuite name="InvalidFiles" tests="18" failures="0" disabled="0" skipped="0" errors="0" time="0.044" timestamp="2026-05-05T19:25:20.201">
+    <testcase name="BadCRC" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="237" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.201" classname="InvalidFiles" />
+    <testcase name="BadCRCAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="243" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.203" classname="InvalidFiles" />
+    <testcase name="BadRecordDescriptor" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="248" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.207" classname="InvalidFiles" />
+    <testcase name="BadRecordDescriptorAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="253" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:20.210" classname="InvalidFiles" />
+    <testcase name="BadTimeBase" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="258" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.214" classname="InvalidFiles" />
+    <testcase name="BadTimeContext" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="263" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.216" classname="InvalidFiles" />
+    <testcase name="DataAfterRecords" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="269" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.218" classname="InvalidFiles" />
+    <testcase name="EmptyFile" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="275" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.221" classname="InvalidFiles" />
+    <testcase name="EmptyFileAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="281" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.222" classname="InvalidFiles" />
+    <testcase name="FileTooLarge" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="286" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.224" classname="InvalidFiles" />
+    <testcase name="FileTooLargeAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="292" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.226" classname="InvalidFiles" />
+    <testcase name="MissingCRC" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="297" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.229" classname="InvalidFiles" />
+    <testcase name="MissingFile" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="303" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.232" classname="InvalidFiles" />
+    <testcase name="SizeFieldTooLarge" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="309" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.234" classname="InvalidFiles" />
+    <testcase name="SizeFieldTooSmall" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="315" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.236" classname="InvalidFiles" />
+    <testcase name="USecFieldTooShort" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="320" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.239" classname="InvalidFiles" />
+    <testcase name="RunNoRecords" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="398" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.241" classname="InvalidFiles" />
+    <testcase name="ValidateNoRecords" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="403" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.243" classname="InvalidFiles" />
+  </testsuite>
+  <testsuite name="Mixed" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.012" timestamp="2026-05-05T19:25:20.245">
+    <testcase name="AutoByCommand" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="325" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.245" classname="Mixed" />
+    <testcase name="AutoByCommandAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="331" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.248" classname="Mixed" />
+    <testcase name="Validate" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="336" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.252" classname="Mixed" />
+    <testcase name="ValidateAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="341" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.255" classname="Mixed" />
+  </testsuite>
+  <testsuite name="NoFiles" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-05-05T19:25:20.258">
+    <testcase name="Init" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="345" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.258" classname="NoFiles" />
+    <testcase name="InitAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="351" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.259" classname="NoFiles" />
+    <testcase name="NoSequenceActive" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="356" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.259" classname="NoFiles" />
+    <testcase name="NoSequenceActiveAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="362" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.260" classname="NoFiles" />
+  </testsuite>
+  <testsuite name="Relative" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.012" timestamp="2026-05-05T19:25:20.261">
+    <testcase name="AutoByCommand" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="367" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.261" classname="Relative" />
+    <testcase name="AutoByCommandAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="373" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.263" classname="Relative" />
+    <testcase name="Validate" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="378" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.267" classname="Relative" />
+    <testcase name="ValidateAMPCS" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="383" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:25:20.269" classname="Relative" />
+  </testsuite>
+  <testsuite name="JoinWait" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-05-05T19:25:20.273">
+    <testcase name="JoinWaitNoActiveSeq" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="388" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.273" classname="JoinWait" />
+    <testcase name="JoinWaitWithActiveSeq" file="/home/anne12/proyectoCS/fprime/Svc/CmdSequencer/test/ut/CmdSequencerMain.cpp" line="393" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:20.274" classname="JoinWait" />
+  </testsuite>
+</testsuites>

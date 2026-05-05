@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.008" timestamp="2026-05-05T19:25:57.895" name="AllTests">
+  <testsuite name="TlmChanTest" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.008" timestamp="2026-05-05T19:25:57.896">
+    <testcase name="InitTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmChan/test/ut/TlmChanMain.cpp" line="14" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.896" classname="TlmChanTest" />
+    <testcase name="NominalChannelTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmChan/test/ut/TlmChanMain.cpp" line="18" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.898" classname="TlmChanTest" />
+    <testcase name="MultiChannelTest" file="/home/anne12/proyectoCS/fprime/Svc/TlmChan/test/ut/TlmChanMain.cpp" line="27" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:57.899" classname="TlmChanTest" />
+    <testcase name="OffNominal" file="/home/anne12/proyectoCS/fprime/Svc/TlmChan/test/ut/TlmChanMain.cpp" line="37" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.903" classname="TlmChanTest" />
+  </testsuite>
+</testsuites>

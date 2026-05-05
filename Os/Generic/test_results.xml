@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="20" failures="0" disabled="0" errors="0" time="6.315" timestamp="2026-05-05T19:26:51.319" name="AllTests">
+  <testsuite name="InterfaceUninitialized" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:26:51.320">
+    <testcase name="SendPointer" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="128" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.320" classname="InterfaceUninitialized" />
+    <testcase name="SendBuffer" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="140" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.320" classname="InterfaceUninitialized" />
+    <testcase name="ReceivePointer" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="153" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.320" classname="InterfaceUninitialized" />
+    <testcase name="ReceiveBuffer" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="166" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:51.320" classname="InterfaceUninitialized" />
+  </testsuite>
+  <testsuite name="InterfaceInvalid" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="1.491" timestamp="2026-05-05T19:26:51.320">
+    <testcase name="CreateInvalidDepth" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="179" status="run" result="completed" time="0.223" timestamp="2026-05-05T19:26:51.320" classname="InterfaceInvalid" />
+    <testcase name="CreateInvalidSize" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="186" status="run" result="completed" time="0.231" timestamp="2026-05-05T19:26:51.544" classname="InterfaceInvalid" />
+    <testcase name="SendPointerNull" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="193" status="run" result="completed" time="0.235" timestamp="2026-05-05T19:26:51.775" classname="InterfaceInvalid" />
+    <testcase name="SendInvalidEnum" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="203" status="run" result="completed" time="0.331" timestamp="2026-05-05T19:26:52.012" classname="InterfaceInvalid" />
+    <testcase name="ReceivePointerNull" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="214" status="run" result="completed" time="0.22" timestamp="2026-05-05T19:26:52.343" classname="InterfaceInvalid" />
+    <testcase name="ReceiveInvalidEnum" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="225" status="run" result="completed" time="0.247" timestamp="2026-05-05T19:26:52.564" classname="InterfaceInvalid" />
+  </testsuite>
+  <testsuite name="BasicRules" tests="7" failures="0" disabled="0" skipped="0" errors="0" time="0.005" timestamp="2026-05-05T19:26:52.812">
+    <testcase name="Create" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="236" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:52.812" classname="BasicRules" />
+    <testcase name="Send" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="248" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:52.813" classname="BasicRules" />
+    <testcase name="Overflow" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="256" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:26:52.813" classname="BasicRules" />
+    <testcase name="Recv" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="264" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:52.815" classname="BasicRules" />
+    <testcase name="Underflow" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="273" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:52.816" classname="BasicRules" />
+    <testcase name="SendRecv" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="281" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:52.816" classname="BasicRules" />
+    <testcase name="OverflowUnderflow" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="292" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:26:52.816" classname="BasicRules" />
+  </testsuite>
+  <testsuite name="Blocking" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.004" timestamp="2026-05-05T19:26:52.818">
+    <testcase name="SendBlock" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="306" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:26:52.818" classname="Blocking" />
+    <testcase name="ReceiveBlock" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="321" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:26:52.821" classname="Blocking" />
+  </testsuite>
+  <testsuite name="Random" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="4.812" timestamp="2026-05-05T19:26:52.822">
+    <testcase name="RandomNominal" file="/home/anne12/proyectoCS/fprime/Os/test/ut/queue/CommonTests.cpp" line="336" status="run" result="completed" time="4.812" timestamp="2026-05-05T19:26:52.822" classname="Random" />
+  </testsuite>
+</testsuites>

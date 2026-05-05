@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="0" disabled="0" errors="0" time="0.008" timestamp="2026-05-05T19:25:53.614" name="AllTests">
+  <testsuite name="Nominal" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.007" timestamp="2026-05-05T19:25:53.616">
+    <testcase name="DispatchTest" file="/home/anne12/proyectoCS/fprime/Svc/FileDispatcher/test/ut/FileDispatcherTestMain.cpp" line="9" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:53.616" classname="Nominal" />
+    <testcase name="DispatchAllDisabledTest" file="/home/anne12/proyectoCS/fprime/Svc/FileDispatcher/test/ut/FileDispatcherTestMain.cpp" line="14" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.620" classname="Nominal" />
+    <testcase name="DispatchAllCmdDisabledTest" file="/home/anne12/proyectoCS/fprime/Svc/FileDispatcher/test/ut/FileDispatcherTestMain.cpp" line="19" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.621" classname="Nominal" />
+    <testcase name="DispatchAllCmdEnabledTest" file="/home/anne12/proyectoCS/fprime/Svc/FileDispatcher/test/ut/FileDispatcherTestMain.cpp" line="24" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.622" classname="Nominal" />
+    <testcase name="DispatchPingTest" file="/home/anne12/proyectoCS/fprime/Svc/FileDispatcher/test/ut/FileDispatcherTestMain.cpp" line="29" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:53.622" classname="Nominal" />
+  </testsuite>
+</testsuites>

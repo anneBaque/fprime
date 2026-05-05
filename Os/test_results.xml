@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="0.665" timestamp="2026-05-05T19:26:14.188" name="AllTests">
+  <testsuite name="Nominal" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.665" timestamp="2026-05-05T19:26:14.188">
+    <testcase name="IntervalTimerTest" file="/home/anne12/proyectoCS/fprime/Os/test/ut/OsTestMain.cpp" line="14" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:26:14.188" classname="Nominal" />
+    <testcase name="ValidateFileTest" file="/home/anne12/proyectoCS/fprime/Os/test/ut/OsTestMain.cpp" line="17" status="run" result="completed" time="0.659" timestamp="2026-05-05T19:26:14.193" classname="Nominal" />
+    <testcase name="MutexBasicLockableTest" file="/home/anne12/proyectoCS/fprime/Os/test/ut/OsTestMain.cpp" line="21" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:14.853" classname="Nominal" />
+  </testsuite>
+</testsuites>

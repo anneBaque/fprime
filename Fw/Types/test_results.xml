@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="7" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:18.755" name="AllTests">
+  <testsuite name="Nominal" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:25:18.755">
+    <testcase name="scanIntegerWithVariadicOverload" file="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp" line="23" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:18.755" classname="Nominal" />
+    <testcase name="scanIntegerAndWordWithVaListOverload" file="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp" line="35" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:18.755" classname="Nominal" />
+    <testcase name="zeroConversionsReturnsSuccessAndCountZero" file="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp" line="72" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:18.756" classname="Nominal" />
+    <testcase name="noCaptureFormatReturnsSuccessAndCountZero" file="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp" line="84" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:18.756" classname="Nominal" />
+  </testsuite>
+  <testsuite name="Errors" tests="3" failures="0" disabled="0" skipped="1" errors="0" time="0" timestamp="2026-05-05T19:25:18.756">
+    <testcase name="nullFormatStringReturnsInvalidFormatString" file="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp" line="50" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:18.756" classname="Errors" />
+    <testcase name="unterminatedSourceReturnsError" file="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp" line="61" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:18.756" classname="Errors" />
+    <testcase name="overflowMaximumSizeReturnsSizeOverflow" file="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp" line="94" status="run" result="skipped" time="0" timestamp="2026-05-05T19:25:18.756" classname="Errors">
+      <skipped message="/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp:96&#x0A;Cannot create maximumSize &gt; size_t::max() when FwSizeType and size_t have equal max."><![CDATA[/home/anne12/proyectoCS/fprime/Fw/Types/test/ut/ScanfScanTest.cpp:96
+Cannot create maximumSize > size_t::max() when FwSizeType and size_t have equal max.]]></skipped>
+    </testcase>
+  </testsuite>
+</testsuites>

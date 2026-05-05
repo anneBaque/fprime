@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="12" failures="0" disabled="0" errors="0" time="0.015" timestamp="2026-05-05T19:25:57.728" name="AllTests">
+  <testsuite name="ParameterDbTest" tests="12" failures="0" disabled="0" skipped="0" errors="0" time="0.015" timestamp="2026-05-05T19:25:57.728">
+    <testcase name="NominalPopulateTest" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="41" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:57.728" classname="ParameterDbTest" />
+    <testcase name="NominalFileSaveTest" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="60" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:57.731" classname="ParameterDbTest" />
+    <testcase name="NominalFileLoadTest" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="80" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:57.732" classname="ParameterDbTest" />
+    <testcase name="PrmMissingExtraParamsTest" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="118" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:57.733" classname="ParameterDbTest" />
+    <testcase name="PrmFileReadError" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="138" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:57.734" classname="ParameterDbTest" />
+    <testcase name="PrmFileWriteError" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="158" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:57.736" classname="ParameterDbTest" />
+    <testcase name="PrmDbEqualTest" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="178" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.737" classname="ParameterDbTest" />
+    <testcase name="PrmDbCopyTest" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="194" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.738" classname="ParameterDbTest" />
+    <testcase name="PrmDbCommitTest" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="210" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.739" classname="ParameterDbTest" />
+    <testcase name="PrmDbFileLoadNominal" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="226" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:57.739" classname="ParameterDbTest" />
+    <testcase name="PrmDbFileLoadWithErrors" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="242" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:57.741" classname="ParameterDbTest" />
+    <testcase name="PrmFileLoadIllegalActions" file="/home/anne12/proyectoCS/fprime/Svc/PrmDb/test/ut/PrmDbTestMain.cpp" line="258" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:57.742" classname="ParameterDbTest" />
+  </testsuite>
+</testsuites>

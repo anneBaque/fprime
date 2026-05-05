@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="0" disabled="0" errors="0" time="0" timestamp="2026-05-05T19:27:01.448" name="AllTests">
+  <testsuite name="Checksum" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:27:01.448">
+    <testcase name="OnePacket" file="/home/anne12/proyectoCS/fprime/CFDP/Checksum/test/ut/ChecksumMain.cpp" line="16" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:01.448" classname="Checksum" />
+    <testcase name="TwoPacketsAligned" file="/home/anne12/proyectoCS/fprime/CFDP/Checksum/test/ut/ChecksumMain.cpp" line="22" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:01.448" classname="Checksum" />
+    <testcase name="TwoPacketsUnaligned1" file="/home/anne12/proyectoCS/fprime/CFDP/Checksum/test/ut/ChecksumMain.cpp" line="29" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:01.448" classname="Checksum" />
+    <testcase name="TwoPacketsUnaligned2" file="/home/anne12/proyectoCS/fprime/CFDP/Checksum/test/ut/ChecksumMain.cpp" line="36" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:01.448" classname="Checksum" />
+    <testcase name="ThreePackets" file="/home/anne12/proyectoCS/fprime/CFDP/Checksum/test/ut/ChecksumMain.cpp" line="43" status="run" result="completed" time="0" timestamp="2026-05-05T19:27:01.448" classname="Checksum" />
+  </testsuite>
+</testsuites>

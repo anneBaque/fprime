@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="10" failures="0" disabled="0" errors="0" time="0.48" timestamp="2026-05-05T19:25:57.055" name="AllTests">
+  <testsuite name="Test" tests="10" failures="0" disabled="0" skipped="0" errors="0" time="0.48" timestamp="2026-05-05T19:25:57.055">
+    <testcase name="NominalTlm" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="7" status="run" result="completed" time="0.051" timestamp="2026-05-05T19:25:57.055" classname="Test" />
+    <testcase name="WarningTlm" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="12" status="run" result="completed" time="0.041" timestamp="2026-05-05T19:25:57.106" classname="Test" />
+    <testcase name="FaultTlm" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="17" status="run" result="completed" time="0.057" timestamp="2026-05-05T19:25:57.149" classname="Test" />
+    <testcase name="DisableAllMonitoring" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="22" status="run" result="completed" time="0.044" timestamp="2026-05-05T19:25:57.207" classname="Test" />
+    <testcase name="DisableOneMonitoring" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="27" status="run" result="completed" time="0.065" timestamp="2026-05-05T19:25:57.251" classname="Test" />
+    <testcase name="UpdatePingTimeout" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="32" status="run" result="completed" time="0.04" timestamp="2026-05-05T19:25:57.316" classname="Test" />
+    <testcase name="WatchdogCheck" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="37" status="run" result="completed" time="0.039" timestamp="2026-05-05T19:25:57.357" classname="Test" />
+    <testcase name="NominalCmd" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="42" status="run" result="completed" time="0.04" timestamp="2026-05-05T19:25:57.397" classname="Test" />
+    <testcase name="Nominal2CmdsDuringTlm" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="47" status="run" result="completed" time="0.045" timestamp="2026-05-05T19:25:57.437" classname="Test" />
+    <testcase name="Miscellaneous" file="/home/anne12/proyectoCS/fprime/Svc/Health/test/ut/HealthTestMain.cpp" line="52" status="run" result="completed" time="0.051" timestamp="2026-05-05T19:25:57.483" classname="Test" />
+  </testsuite>
+</testsuites>

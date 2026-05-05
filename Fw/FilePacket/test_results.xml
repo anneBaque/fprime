@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:17.135" name="AllTests">
+  <testsuite name="FilePacket" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:17.135">
+    <testcase name="Header" file="/home/anne12/proyectoCS/fprime/Fw/FilePacket/test/ut/FilePacketMain.cpp" line="50" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:17.135" classname="FilePacket" />
+    <testcase name="StartPacket" file="/home/anne12/proyectoCS/fprime/Fw/FilePacket/test/ut/FilePacketMain.cpp" line="56" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:17.136" classname="FilePacket" />
+    <testcase name="DataPacket" file="/home/anne12/proyectoCS/fprime/Fw/FilePacket/test/ut/FilePacketMain.cpp" line="80" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:17.136" classname="FilePacket" />
+    <testcase name="EndPacket" file="/home/anne12/proyectoCS/fprime/Fw/FilePacket/test/ut/FilePacketMain.cpp" line="107" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:17.136" classname="FilePacket" />
+    <testcase name="CancelPacket" file="/home/anne12/proyectoCS/fprime/Fw/FilePacket/test/ut/FilePacketMain.cpp" line="131" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:17.136" classname="FilePacket" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.002" timestamp="2026-05-05T19:25:20.330" name="AllTests">
+  <testsuite name="Nominal" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:20.331">
+    <testcase name="Local" file="/home/anne12/proyectoCS/fprime/Svc/CmdSplitter/test/ut/CmdSplitterTestMain.cpp" line="7" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.331" classname="Nominal" />
+    <testcase name="Remote" file="/home/anne12/proyectoCS/fprime/Svc/CmdSplitter/test/ut/CmdSplitterTestMain.cpp" line="12" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.332" classname="Nominal" />
+    <testcase name="Forwarding" file="/home/anne12/proyectoCS/fprime/Svc/CmdSplitter/test/ut/CmdSplitterTestMain.cpp" line="17" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.332" classname="Nominal" />
+  </testsuite>
+  <testsuite name="Error" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2026-05-05T19:25:20.333">
+    <testcase name="BadCommands" file="/home/anne12/proyectoCS/fprime/Svc/CmdSplitter/test/ut/CmdSplitterTestMain.cpp" line="22" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:20.333" classname="Error" />
+  </testsuite>
+</testsuites>

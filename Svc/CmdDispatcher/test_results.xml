@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="9" failures="0" disabled="0" errors="0" time="0.017" timestamp="2026-05-05T19:25:19.953" name="AllTests">
+  <testsuite name="CmdDispTestNominal" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.007" timestamp="2026-05-05T19:25:19.953">
+    <testcase name="NominalDispatch" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="44" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:19.953" classname="CmdDispTestNominal" />
+    <testcase name="NopTest" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="62" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.957" classname="CmdDispTestNominal" />
+    <testcase name="ReregisterCommand" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="80" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.959" classname="CmdDispTestNominal" />
+  </testsuite>
+  <testsuite name="CmdDispTestOffNominal" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0.01" timestamp="2026-05-05T19:25:19.960">
+    <testcase name="InvalidOpcodeDispatch" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="98" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.960" classname="CmdDispTestOffNominal" />
+    <testcase name="FailedCommand" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="116" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.961" classname="CmdDispTestOffNominal" />
+    <testcase name="InvalidCommand" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="134" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.963" classname="CmdDispTestOffNominal" />
+    <testcase name="CommandOverflow" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="152" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:19.964" classname="CmdDispTestOffNominal" />
+    <testcase name="ClearSequenceTracker" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="170" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:25:19.967" classname="CmdDispTestOffNominal" />
+    <testcase name="CommandQueueOverflow" file="/home/anne12/proyectoCS/fprime/Svc/CmdDispatcher/test/ut/CommandDispatcherTestMain.cpp" line="188" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:19.968" classname="CmdDispTestOffNominal" />
+  </testsuite>
+</testsuites>

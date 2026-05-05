@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" time="0.765" timestamp="2026-05-05T19:26:12.546" name="AllTests">
+  <testsuite name="TmFramer" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0.765" timestamp="2026-05-05T19:26:12.546">
+    <testcase name="testComStatusPassthrough" file="/home/anne12/proyectoCS/fprime/Svc/Ccsds/TmFramer/test/ut/TmFramerTestMain.cpp" line="9" status="run" result="completed" time="0.003" timestamp="2026-05-05T19:26:12.546" classname="TmFramer" />
+    <testcase name="testDataReturn" file="/home/anne12/proyectoCS/fprime/Svc/Ccsds/TmFramer/test/ut/TmFramerTestMain.cpp" line="14" status="run" result="completed" time="0.276" timestamp="2026-05-05T19:26:12.550" classname="TmFramer" />
+    <testcase name="testNominalFraming" file="/home/anne12/proyectoCS/fprime/Svc/Ccsds/TmFramer/test/ut/TmFramerTestMain.cpp" line="19" status="run" result="completed" time="0" timestamp="2026-05-05T19:26:12.827" classname="TmFramer" />
+    <testcase name="testSeqCountWrapAround" file="/home/anne12/proyectoCS/fprime/Svc/Ccsds/TmFramer/test/ut/TmFramerTestMain.cpp" line="24" status="run" result="completed" time="0.001" timestamp="2026-05-05T19:26:12.828" classname="TmFramer" />
+    <testcase name="testInputBufferTooLarge" file="/home/anne12/proyectoCS/fprime/Svc/Ccsds/TmFramer/test/ut/TmFramerTestMain.cpp" line="29" status="run" result="completed" time="0.238" timestamp="2026-05-05T19:26:12.829" classname="TmFramer" />
+    <testcase name="testBufferOwnershipState" file="/home/anne12/proyectoCS/fprime/Svc/Ccsds/TmFramer/test/ut/TmFramerTestMain.cpp" line="34" status="run" result="completed" time="0.243" timestamp="2026-05-05T19:26:13.068" classname="TmFramer" />
+  </testsuite>
+</testsuites>

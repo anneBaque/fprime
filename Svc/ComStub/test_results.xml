@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="10" failures="0" disabled="0" errors="0" time="0.01" timestamp="2026-05-05T19:25:19.893" name="AllTests">
+  <testsuite name="Common" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-05-05T19:25:19.894">
+    <testcase name="Initial" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="7" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:19.894" classname="Common" />
+  </testsuite>
+  <testsuite name="Sync" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-05-05T19:25:19.896">
+    <testcase name="BasicIo" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="12" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.896" classname="Sync" />
+    <testcase name="Fail" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="22" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.897" classname="Sync" />
+    <testcase name="Retry" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="36" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.897" classname="Sync" />
+    <testcase name="RetryReset" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="41" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.898" classname="Sync" />
+  </testsuite>
+  <testsuite name="Async" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:19.899">
+    <testcase name="BasicIo" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="17" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.899" classname="Async" />
+    <testcase name="Fail" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="26" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.899" classname="Async" />
+    <testcase name="Retry" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="46" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.900" classname="Async" />
+    <testcase name="RetryReset" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="51" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:19.900" classname="Async" />
+  </testsuite>
+  <testsuite name="Nominal" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-05-05T19:25:19.900">
+    <testcase name="BufferReturn" file="/home/anne12/proyectoCS/fprime/Svc/ComStub/test/ut/ComStubTestMain.cpp" line="31" status="run" result="completed" time="0.002" timestamp="2026-05-05T19:25:19.900" classname="Nominal" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" time="0.006" timestamp="2026-05-05T19:25:54.356" name="AllTests">
+  <testsuite name="CcsdsFrameDetectorTest" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0.006" timestamp="2026-05-05T19:25:54.356">
+    <testcase name="TestBufferTooSmall" file="/home/anne12/proyectoCS/fprime/Svc/FrameAccumulator/test/ut/detectors/CcsdsTcFrameDetectorTestMain.cpp" line="80" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.356" classname="CcsdsFrameDetectorTest" />
+    <testcase name="TestFrameDetected" file="/home/anne12/proyectoCS/fprime/Svc/FrameAccumulator/test/ut/detectors/CcsdsTcFrameDetectorTestMain.cpp" line="95" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.356" classname="CcsdsFrameDetectorTest" />
+    <testcase name="TestManyFrameDetected" file="/home/anne12/proyectoCS/fprime/Svc/FrameAccumulator/test/ut/detectors/CcsdsTcFrameDetectorTestMain.cpp" line="106" status="run" result="completed" time="0.005" timestamp="2026-05-05T19:25:54.356" classname="CcsdsFrameDetectorTest" />
+    <testcase name="TestNoFrameDetected" file="/home/anne12/proyectoCS/fprime/Svc/FrameAccumulator/test/ut/detectors/CcsdsTcFrameDetectorTestMain.cpp" line="119" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.362" classname="CcsdsFrameDetectorTest" />
+    <testcase name="TestMoreDataNeeded" file="/home/anne12/proyectoCS/fprime/Svc/FrameAccumulator/test/ut/detectors/CcsdsTcFrameDetectorTestMain.cpp" line="129" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.362" classname="CcsdsFrameDetectorTest" />
+    <testcase name="TestCorruptedCrc" file="/home/anne12/proyectoCS/fprime/Svc/FrameAccumulator/test/ut/detectors/CcsdsTcFrameDetectorTestMain.cpp" line="139" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:54.362" classname="CcsdsFrameDetectorTest" />
+  </testsuite>
+</testsuites>

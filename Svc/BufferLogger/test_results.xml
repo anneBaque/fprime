@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="9" failures="0" disabled="0" errors="0" time="0.211" timestamp="2026-05-05T19:25:19.301" name="AllTests">
+  <testsuite name="Test" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.006" timestamp="2026-05-05T19:25:19.301">
+    <testcase name="LogNoInit" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="10" status="run" result="completed" time="0.006" timestamp="2026-05-05T19:25:19.301" classname="Test" />
+  </testsuite>
+  <testsuite name="TestErrors" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.045" timestamp="2026-05-05T19:25:19.308">
+    <testcase name="LogFileOpen" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="19" status="run" result="completed" time="0.02" timestamp="2026-05-05T19:25:19.308" classname="TestErrors" />
+    <testcase name="LogFileWrite" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="24" status="run" result="completed" time="0.013" timestamp="2026-05-05T19:25:19.328" classname="TestErrors" />
+    <testcase name="LogFileValidation" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="29" status="run" result="completed" time="0.01" timestamp="2026-05-05T19:25:19.342" classname="TestErrors" />
+  </testsuite>
+  <testsuite name="TestLogging" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.154" timestamp="2026-05-05T19:25:19.353">
+    <testcase name="BufferSendIn" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="38" status="run" result="completed" time="0.046" timestamp="2026-05-05T19:25:19.353" classname="TestLogging" />
+    <testcase name="CloseFile" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="43" status="run" result="completed" time="0.022" timestamp="2026-05-05T19:25:19.400" classname="TestLogging" />
+    <testcase name="ComIn" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="48" status="run" result="completed" time="0.054" timestamp="2026-05-05T19:25:19.422" classname="TestLogging" />
+    <testcase name="OnOff" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="53" status="run" result="completed" time="0.031" timestamp="2026-05-05T19:25:19.476" classname="TestLogging" />
+  </testsuite>
+  <testsuite name="TestHealth" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.004" timestamp="2026-05-05T19:25:19.508">
+    <testcase name="Ping" file="/home/anne12/proyectoCS/fprime/Svc/BufferLogger/test/ut/BufferLoggerMain.cpp" line="62" status="run" result="completed" time="0.004" timestamp="2026-05-05T19:25:19.508" classname="TestHealth" />
+  </testsuite>
+</testsuites>

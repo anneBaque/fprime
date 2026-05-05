@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:58.102" name="AllTests">
+  <testsuite name="Test" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-05-05T19:25:58.103">
+    <testcase name="GetTime" file="/home/anne12/proyectoCS/fprime/Svc/PosixTime/test/ut/PosixTimeMain.cpp" line="7" status="run" result="completed" time="0" timestamp="2026-05-05T19:25:58.103" classname="Test" />
+  </testsuite>
+</testsuites>
