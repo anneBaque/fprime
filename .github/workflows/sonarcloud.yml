@@ -61,35 +61,44 @@ jobs:
         fprime-util build -j4
 
   UTs:
-      runs-on: ubuntu-latest
-      container:
-        image: redhat/ubi8:8.10
-      steps: # <--- ESTA LÍNEA ES LA QUE FALTABA
-        - name: "Install dependencies"
-          run: |
-            dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
-            git config --global --add safe.directory ${GITHUB_WORKSPACE}
+    runs-on: ubuntu-latest
+    container:
+      image: redhat/ubi8:8.10
+    steps:
+      - name: "Install dependencies"
+        run: |
+          dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.11.0-openjdk unzip
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
 
-        - name: "Checkout F´ Repository"
-          uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-            submodules: true
+      - name: "Checkout F´ Repository"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
 
-        - uses: ./.github/actions/setup
+      - uses: ./.github/actions/setup
 
-        - name: Build Framework and Generate Json
-          run: |
-            fprime-util generate
-            # Buscamos el archivo y lo movemos a la raíz para Sonar
-            find build-fprime-automatic-default -name "compile_commands.json" -exec cp {} . \;
+      - name: Build Framework and Generate Json
+        run: |
+          fprime-util generate
+          # Copiamos el archivo de compilación a la raíz
+          find build-fprime-automatic-default -name "compile_commands.json" -exec cp {} . \;
 
-        - name: SonarCloud Scan
-          uses: SonarSource/sonarcloud-github-action@v2
-          env:
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            args: >
-              -Dsonar.projectKey=anneBaque_fprime
-              -Dsonar.organization=anneBaque
+      - name: "Run SonarCloud Scanner Manual"
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          # 1. Descargar el scanner oficial
+          curl -sSLo /tmp/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+          unzip -o /tmp/sonar-scanner.zip -d /opt/
+          
+          # 2. Ejecutar el scanner apuntando a tu proyecto
+          # Usamos el binario directamente para que no haya líos de contenedores
+          /opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner \
+            -Dsonar.projectKey=anneBaque_fprime \
+            -Dsonar.organization=anneBaque \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.sources=Fw \
+            -Dsonar.inclusions=**/* \
+            -Dsonar.cfamily.compile-commands=compile_commands.json
