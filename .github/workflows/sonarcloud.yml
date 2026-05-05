@@ -97,23 +97,16 @@ jobs:
             exit 1
           fi
 
-      - name: "Run SonarCloud Scanner Manual"
+      - name: "Run SonarCloud Scanner"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          # Instalamos Java 17 (Requerido por los scanners modernos en 2026) y unzip
+          # Instalamos Java 17 (Requerido por los scanners modernos) y unzip
           dnf install -y java-17-openjdk unzip curl
           
           # Descargar y ejecutar el scanner
           curl -sSLo /tmp/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
           unzip -o /tmp/sonar-scanner.zip -d /opt/
           
-          /opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner \
-            -Dsonar.projectKey=anneBaque_fprime \
-            -Dsonar.organization=anneBaque \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.sources=Fw \
-            -Dsonar.inclusions=**/* \
-            -Dsonar.cfamily.compile-commands=compile_commands.json \
-            -Dsonar.verbose=true
+          # Ejecutar scanner con configuración desde sonar-project.properties
+          /opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner
