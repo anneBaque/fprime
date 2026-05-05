@@ -61,30 +61,13 @@ jobs:
         fprime-util build -j4
 
   UTs:
-    runs-on: ubuntu-latest
-    container:
-      image: redhat/ubi8:8.10
-    steps:
-    - name: "Install dependencies"
+    - name: Build Framework and Generate Json
       run: |
-        dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
-        git config --global --add safe.directory ${GITHUB_WORKSPACE}
-        
-    - name: "Checkout F´ Repository"
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        submodules: true
-
-    - uses: ./.github/actions/setup
-
-    - name: "Generate Compile Commands"
-      # Es vital generar esto para que Sonar entienda el C++
-      run: |
+        # 1. Generamos el sistema de build
         fprime-util generate
-        # Movemos o aseguramos la ruta del compile_commands para Sonar
-        mkdir -p build-artifacts
-        cp build-fprime-automatic-default/compile_commands.json build-artifacts/compile_commands.json
+        # 2. Buscamos el compile_commands.json y lo movemos a la raíz
+        # para que el archivo .properties lo encuentre fácil
+        find build-fprime-automatic-default -name "compile_commands.json" -exec cp {} . \;
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v2
@@ -92,7 +75,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        # Simplificamos los args. Sonar leerá el sonar-project.properties por defecto.
-        # Solo pasamos variables dinámicas si es estrictamente necesario.
+        # No pongas -Dsonar.sources aquí. Deja que mande el archivo .properties
         args: >
-          -Dsonar.scm.revision=${{ github.event.pull_request.head.sha || github.sha }}
+          -Dsonar.projectKey=anneBaque_fprime
+          -Dsonar.organization=anneBaque
