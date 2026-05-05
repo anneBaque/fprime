@@ -81,24 +81,39 @@ jobs:
       - name: Build Framework and Generate Json
         run: |
           fprime-util generate
-          # Copiamos el archivo de compilación a la raíz
-          find build-fprime-automatic-default -name "compile_commands.json" -exec cp {} . \;
+          # Listamos directorios para depurar si algo sale mal
+          echo "Directorios creados:"
+          ls -d build-fprime-* || echo "No se encontraron carpetas build-fprime-*"
+          
+          # Buscamos el archivo compile_commands.json en CUALQUIER subcarpeta de build
+          # y lo traemos a la raíz.
+          find . -name "compile_commands.json" -exec cp {} . \;
+          
+          # Verificamos si el archivo realmente se copió
+          if [ -f "compile_commands.json" ]; then
+            echo "✅ compile_commands.json encontrado y copiado."
+          else
+            echo "❌ ERROR: No se encontró compile_commands.json"
+            exit 1
+          fi
 
       - name: "Run SonarCloud Scanner Manual"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          # 1. Descargar el scanner oficial
+          # Instalamos Java 17 (Requerido por los scanners modernos en 2026) y unzip
+          dnf install -y java-17-openjdk unzip curl
+          
+          # Descargar y ejecutar el scanner
           curl -sSLo /tmp/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
           unzip -o /tmp/sonar-scanner.zip -d /opt/
           
-          # 2. Ejecutar el scanner apuntando a tu proyecto
-          # Usamos el binario directamente para que no haya líos de contenedores
           /opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner \
             -Dsonar.projectKey=anneBaque_fprime \
             -Dsonar.organization=anneBaque \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
             -Dsonar.sources=Fw \
             -Dsonar.inclusions=**/* \
-            -Dsonar.cfamily.compile-commands=compile_commands.json
+            -Dsonar.cfamily.compile-commands=compile_commands.json \
+            -Dsonar.verbose=true
