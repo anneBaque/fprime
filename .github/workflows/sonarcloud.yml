@@ -61,21 +61,35 @@ jobs:
         fprime-util build -j4
 
   UTs:
-    - name: Build Framework and Generate Json
-      run: |
-        # 1. Generamos el sistema de build
-        fprime-util generate
-        # 2. Buscamos el compile_commands.json y lo movemos a la raíz
-        # para que el archivo .properties lo encuentre fácil
-        find build-fprime-automatic-default -name "compile_commands.json" -exec cp {} . \;
+      runs-on: ubuntu-latest
+      container:
+        image: redhat/ubi8:8.10
+      steps: # <--- ESTA LÍNEA ES LA QUE FALTABA
+        - name: "Install dependencies"
+          run: |
+            dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
+            git config --global --add safe.directory ${GITHUB_WORKSPACE}
 
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@v2
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        # No pongas -Dsonar.sources aquí. Deja que mande el archivo .properties
-        args: >
-          -Dsonar.projectKey=anneBaque_fprime
-          -Dsonar.organization=anneBaque
+        - name: "Checkout F´ Repository"
+          uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+            submodules: true
+
+        - uses: ./.github/actions/setup
+
+        - name: Build Framework and Generate Json
+          run: |
+            fprime-util generate
+            # Buscamos el archivo y lo movemos a la raíz para Sonar
+            find build-fprime-automatic-default -name "compile_commands.json" -exec cp {} . \;
+
+        - name: SonarCloud Scan
+          uses: SonarSource/sonarcloud-github-action@v2
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            args: >
+              -Dsonar.projectKey=anneBaque_fprime
+              -Dsonar.organization=anneBaque
