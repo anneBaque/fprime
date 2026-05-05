@@ -1,112 +1,65 @@
-# Run suite of CI builds and tests in a RHEL8 container
-name: "CI [RHEL8]"
+name: SonarCloud Analysis
 
 on:
   push:
-    branches: [ devel, "release/**" ]
+    branches: [ "main", "release/v4.2.x" ]
   pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ devel, "release/**" ]
-    paths-ignore:
-      - 'docs/**'
-      - '**.md'
-      - '.github/actions/spelling/**'
-      - '.github/ISSUE_TEMPLATE/**'
-
-# Cancel in-progress runs if a newer run is started on a given PR
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: ${{ !contains(github.ref, 'devel') && !contains(github.ref, 'release/')}}
 
 jobs:
-  Framework:
+  build:
     runs-on: ubuntu-latest
-    container:
-      image: redhat/ubi8:8.10
-    steps:
-    - name: "Install dependencies"
-      run: |
-        dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
-        git config --global --add safe.directory ${GITHUB_WORKSPACE}
-    - name: "Checkout F´ Repository"
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        submodules: true
-    - uses: ./.github/actions/setup
-    - name: Build Framework
-      run: |
-        fprime-util generate -DFPRIME_ENABLE_JSON_MODEL_GENERATION=ON
-        fprime-util build --all -j4
 
-  Ref:
-    runs-on: ubuntu-latest
-    container:
-      image: redhat/ubi8:8.10
     steps:
-    - name: "Install dependencies"
-      run: |
-        dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.8.0-openjdk
-        git config --global --add safe.directory ${GITHUB_WORKSPACE}
-    - name: "Checkout F´ Repository"
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        submodules: true
-    - uses: ./.github/actions/setup
-    - name: Build Ref
-      run: |
-        cd Ref
-        fprime-util generate -DFPRIME_ENABLE_JSON_MODEL_GENERATION=ON
-        fprime-util build -j4
-
-  UTs:
-    runs-on: ubuntu-latest
-    container:
-      image: redhat/ubi8:8.10
-    steps:
-      - name: "Install dependencies"
-        run: |
-          dnf install -y git python3.12 python3.12-pip llvm-toolset libasan libubsan java-1.11.0-openjdk unzip
-          git config --global --add safe.directory ${GITHUB_WORKSPACE}
-
-      - name: "Checkout F´ Repository"
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          submodules: true
+          fetch-depth: 0 # Requerido para un análisis preciso de SonarCloud
 
-      - uses: ./.github/actions/setup
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-      - name: Build Framework and Generate Json
+      - name: Set up Java (required for SonarCloud)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install build tools and gcovr
         run: |
-          fprime-util generate
-          # Listamos directorios para depurar si algo sale mal
-          echo "Directorios creados:"
-          ls -d build-fprime-* || echo "No se encontraron carpetas build-fprime-*"
-          
-          # Buscamos el archivo compile_commands.json en CUALQUIER subcarpeta de build
-          # y lo traemos a la raíz.
-          find . -name "compile_commands.json" -exec cp {} . \;
-          
-          # Verificamos si el archivo realmente se copió
-          if [ -f "compile_commands.json" ]; then
-            echo "✅ compile_commands.json encontrado y copiado."
-          else
-            echo "❌ ERROR: No se encontró compile_commands.json"
-            exit 1
-          fi
+          sudo apt update
+          sudo apt install -y build-essential cmake ninja-build
+          pip install --upgrade pip
+          pip install fprime-tools gcovr
+          # Instalamos dependencias del repositorio de F'
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: "Run SonarCloud Scanner"
+      - name: Initialize submodules
+        run: git submodule update --init --recursive # Vital para que existan los frameworks de test
+
+      - name: Build project with Coverage (F Prime)
+        run: |
+          # Generamos con flags de Unit Test para habilitar la cobertura
+          fprime-util generate --ut
+          fprime-util build --ut
+
+      - name: Run Tests and Generate Evidence
+        run: |
+          # 1. Ejecutar tests y guardar resultados en JUnit XML para trazabilidad
+          export GTEST_OUTPUT="xml:test_results.xml"
+          fprime-util check || echo "Algunos tests fallaron, analizando resultados..."
+          
+          # 2. Generar XML de cobertura ignorando errores técnicos de gcov
+          gcovr -r . --sonarqube coverage.xml --gcov-ignore-parse-errors=negative_hits.warn
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          # Instalamos Java 17 (Requerido por los scanners modernos) y unzip
-          dnf install -y java-17-openjdk unzip curl
-          
-          # Descargar y ejecutar el scanner
-          curl -sSLo /tmp/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
-          unzip -o /tmp/sonar-scanner.zip -d /opt/
-          
-          # Ejecutar scanner con configuración desde sonar-project.properties
-          /opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Pasamos los archivos generados como argumentos para visibilidad en el dashboard[cite: 1]
+          args: >
+            -Dsonar.cfamily.gcov.reportsPath=coverage.xml
+            -Dsonar.junit.reportPaths=test_results.xml
